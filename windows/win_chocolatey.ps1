@@ -190,6 +190,7 @@ elseif (($source -eq "windowsfeatures") -or ($source -eq "webpi") -or ($source -
 {
     $expression += " -source $source"
 }
+$expression += " -y"
 
 Set-Attr $result "chocolatey command" $expression
 $op_result = invoke-expression $expression
